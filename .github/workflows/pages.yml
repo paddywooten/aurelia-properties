@@ -34,11 +34,12 @@ jobs:
       - name: Stage the site
         run: |
           mkdir -p _site
-          cp *.html _site/
-          cp -r assets _site/
-          cp robots.txt _site/
-          cp _sitemap.xml _site/sitemap.xml
-          touch _site/.nojekyll
+          cp ./*.html ./_site/
+          cp -r ./assets ./_site/
+          cp ./robots.txt ./_site/
+          cp ./sitemap.xml ./_site/
+          touch ./_site/.nojekyll
+          ls -la ./_site
 
       - uses: actions/configure-pages@v5
 
