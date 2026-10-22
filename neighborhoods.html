@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Neighborhood Guides — Aurelia Properties</title>
+  <meta name="description" content="Detailed guides to the six neighbourhoods we work: the Harbor District, Northwood, Old Town, Lakeside, Riverside and Canyon.">
+  <meta name="theme-color" content="#1d3b33">
+  <link rel="canonical" href="https://aureliaproperties.example.com/neighborhoods.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Aurelia Properties">
+  <meta property="og:title" content="Neighborhood Guides — Aurelia Properties">
+  <meta property="og:description" content="Detailed guides to the six neighbourhoods we work: the Harbor District, Northwood, Old Town, Lakeside, Riverside and Canyon.">
+  <meta property="og:image" content="assets/img/hero.svg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <noscript><style>[data-reveal]{opacity:1 !important;transform:none !important}</style></noscript>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+    <header class="header">
+      <div class="wrap header__inner">
+        <a class="brand" href="index.html">
+          <svg class="brand__mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+  <rect x="1.5" y="1.5" width="45" height="45" rx="11" stroke="#1d3b33" stroke-width="3"/>
+  <path d="M11 33.5L24 14l13 19.5" stroke="#1d3b33" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M17 33.5L24 22.5l7 11" stroke="#c05f3c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="24" cy="38" r="2.4" fill="#b08a4f"/>
+</svg>
+          <span class="brand__text">
+            <span class="brand__name">Aurelia Properties</span>
+            <span class="brand__tag">Real estate, refined.</span>
+          </span>
+        </a>
+
+        <nav class="nav" aria-label="Primary">
+          <ul class="nav__list">
+          <li><a class="nav__link" href="index.html">Home</a></li>
+          <li><a class="nav__link" href="properties.html">Properties</a></li>
+          <li><a class="nav__link" href="neighborhoods.html" aria-current="page">Neighborhoods</a></li>
+          <li><a class="nav__link" href="services.html">Services</a></li>
+          <li><a class="nav__link" href="about.html">About</a></li>
+          <li><a class="nav__link" href="insights.html">Journal</a></li>
+          <li><a class="nav__link" href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="header__actions">
+          <button class="fav-btn" data-fav-open aria-label="Open my shortlist">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 5.6a5 5 0 00-7.1 0L12 7.3l-1.7-1.7a5 5 0 10-7.1 7.1L12 21.5l8.8-8.8a5 5 0 000-7.1z"/></svg>
+            <span class="fav-btn__count" data-fav-count data-empty="true">0</span>
+          </button>
+          <a class="btn btn--sm" href="contact.html">Book a valuation</a>
+          <button class="burger" aria-expanded="false" aria-label="Open menu" aria-controls="drawer">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="drawer" id="drawer">
+      <a href="index.html">Home</a>
+      <a href="properties.html">Properties</a>
+      <a href="neighborhoods.html">Neighborhoods</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="insights.html">Journal</a>
+      <a href="contact.html">Contact</a>
+      <a class="btn btn--light" href="contact.html">Book a valuation</a>
+    </div>
+
+  <main id="main">
+    <section class="page-head">
+      <div class="wrap">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a><span>/</span>Neighborhoods
+        </nav>
+        <h1>Six areas, in detail.</h1>
+        <p>Anyone can list a neighbourhood name. These guides cover what the streets are actually like, what the trade-offs are, and who tends to like them — including the parts that are not flattering.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="grid grid-3" data-neighborhoods></div>
+      </div>
+    </section>
+
+    <section class="section section--sand">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Full guides</span>
+          <h2>Neighbourhood notes</h2>
+          <p>Written by the agents who work these streets daily.</p>
+        </div>
+        <div id="hood-guides" data-hood-guides></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="grid-wide" style="align-items:center">
+          <div>
+            <span class="eyebrow">Comparing</span>
+            <h2>Not sure which area fits?</h2>
+            <p class="lede">Tell us how you commute, what your weekends look like, and what you want the house to feel like. We will come back with two or three specific streets rather than a list of areas.</p>
+            <a class="btn mt-4" href="contact.html">Book a consultation</a>
+          </div>
+          <div class="panel">
+            <h3 class="mb-0">Questions worth asking yourself</h3>
+            <ul class="checklist mt-4">
+              <li><span>How long is the commute at 8am, not on a Sunday?</span></li>
+              <li><span>What happens on a winter evening — is there anywhere to go?</span></li>
+              <li><span>Do you need a car, and where would you park two of them?</span></li>
+              <li><span>What will the street look like in ten years?</span></li>
+              <li><span>Do you want a house, or a place that is easy to resell?</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+    <footer class="footer">
+      <div class="wrap">
+        <div class="footer__top">
+          <div>
+            <a class="brand" href="index.html">
+              <svg class="brand__mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+  <rect x="1.5" y="1.5" width="45" height="45" rx="11" stroke="#1d3b33" stroke-width="3"/>
+  <path d="M11 33.5L24 14l13 19.5" stroke="#1d3b33" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M17 33.5L24 22.5l7 11" stroke="#c05f3c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="24" cy="38" r="2.4" fill="#b08a4f"/>
+</svg>
+              <span class="brand__text">
+                <span class="brand__name">Aurelia Properties</span>
+                <span class="brand__tag">Real estate, refined.</span>
+              </span>
+            </a>
+            <p class="footer__brand">A boutique brokerage representing architecturally significant homes across the Bay Area and the Pacific Northwest. We sell fewer homes, and we sell them properly.</p>
+            <form class="newsletter" data-newsletter novalidate>
+              <label class="visually-hidden" for="nl-email">Email address</label>
+              <input id="nl-email" type="email" name="email" placeholder="Email for the Market Letter" autocomplete="email">
+              <button class="btn btn--sm btn--clay" type="submit">Join</button>
+            </form>
+          </div>
+
+          <div>
+            <h4>Explore</h4>
+            <ul>
+              <li><a href="properties.html">All properties</a></li>
+              <li><a href="properties.html?type=house">Houses</a></li>
+              <li><a href="properties.html?type=condo">Condos &amp; lofts</a></li>
+              <li><a href="properties.html?type=townhouse">Townhouses</a></li>
+              <li><a href="properties.html?status=pending">Pending &amp; recent sales</a></li>
+              <li><a href="neighborhoods.html">Neighborhood guides</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4>Services</h4>
+            <ul>
+              <li><a href="services.html#service-buying">Buyer representation</a></li>
+              <li><a href="services.html#service-selling">Seller representation</a></li>
+              <li><a href="services.html#service-valuation">Property valuation</a></li>
+              <li><a href="services.html#service-investment">Investment &amp; portfolio</a></li>
+              <li><a href="services.html#service-relocation">Relocation</a></li>
+              <li><a href="services.html#service-management">Property management</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4>Contact</h4>
+            <ul>
+              <li><a href="tel:+14155550188">+1 (415) 555-0188</a></li>
+              <li><a href="mailto:hello@aureliaproperties.com">hello@aureliaproperties.com</a></li>
+              <li>1180 Marina Vista Blvd, Suite 400<br>San Francisco, CA 94107</li>
+              <li>Mon–Fri, 9:00am – 6:00pm PT</li>
+              <li>DRE #01884421 · Bonded & Insured</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <span>&copy; Aurelia Properties Group LLC. All rights reserved. DRE #01884421 · Bonded & Insured</span>
+          <div class="flex gap-4 items-center flex-wrap">
+            <a href="legal.html#privacy">Privacy</a>
+            <a href="legal.html#terms">Terms</a>
+            <span>Accessibility</span>
+          </div>
+          <div class="socials">
+            <a href="#" aria-label="Aurelia Properties on Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+            </a>
+            <a href="#" aria-label="Aurelia Properties on LinkedIn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="#" aria-label="Aurelia Properties on YouTube">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l5 3-5 3z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/properties.js"></script>
+</body>
+</html>
